@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/test")
 public class TestController {
-
     // 케이스 1: CustomException 터뜨리기
     @GetMapping("/user-not-found")
     public String testUserNotFound() {
         throw new CustomException(ErrorCode.USER_NOT_FOUND);
     }
+
+    //HTTP GET 요청 -> 서버 -> Controller -> GetMapping
 
     // 케이스 2: 서버 에러 터뜨리기
     @GetMapping("/server-error")

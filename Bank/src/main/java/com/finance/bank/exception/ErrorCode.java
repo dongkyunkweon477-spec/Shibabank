@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 @Getter
 @RequiredArgsConstructor
 public enum ErrorCode {
-
+//enum = 미리 상수들을 넣을 수 있는 자료형 enum을 쓸 때는 무한히 객체 생성이 불가능
     // 유저 관련
     USER_NOT_FOUND(HttpStatus.NOT_FOUND, "유저를 찾을 수 없습니다."),
     DUPLICATE_USER(HttpStatus.CONFLICT, "이미 존재하는 유저입니다."),
